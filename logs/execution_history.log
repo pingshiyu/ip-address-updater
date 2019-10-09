@@ -1,0 +1,4 @@
+2019-10-09 17:52:29,375 [MainThread  ] [DEBUG]  Starting new HTTPS connection (1): api.ipify.org:443
+2019-10-09 17:52:29,834 [MainThread  ] [DEBUG]  https://api.ipify.org:443 "GET / HTTP/1.1" 200 13
+2019-10-09 17:52:29,834 [MainThread  ] [INFO ]  Current IP address is xxx.xxx.xxx.xxx
+2019-10-09 17:52:29,834 [MainThread  ] [INFO ]  Cached IP is xxx.xxx.xxx.xxx

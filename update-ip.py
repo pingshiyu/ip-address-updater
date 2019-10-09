@@ -57,7 +57,7 @@ def update_cached_ip(current_ip):
 def send_update_email(current_ip):
     # prepare login details & from / to addresses
     username = 'xxxxxx@gmail.com'
-    password = 'xxxxxx'
+    password = '******'
     recipient = 'xxxxxx@gmail.com'
     message = '\n'.join([
                     f'From: {username}',
@@ -71,8 +71,6 @@ def send_update_email(current_ip):
     smtp.login(username, password)
     smtp.sendmail(username, recipient, message)
     logger.info(f"Email successfully sent!")
-    '''except:
-        logger.error(f'Something went wrong when sending email: \n{message}')'''
 
 if __name__ == '__main__':
     # prepare logger
@@ -83,5 +81,6 @@ if __name__ == '__main__':
     cached_ip = get_cached_ip()
     # if the addresses are different then update & send update email
     if current_ip and (current_ip != cached_ip):
+        logger.info("IP address has changed, updating & sending update mail...")
         update_cached_ip(current_ip)
         send_update_email(current_ip)
